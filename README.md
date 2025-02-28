@@ -7,7 +7,7 @@
 Выберите из таблицы orders все заказы
 ![1](https://github.com/user-attachments/assets/e92c1f9b-5d9e-4897-9976-5db225f2f144)
 
-![](/LabW1/1.png)
+
 
 ```
 SELECT * FROM orders;

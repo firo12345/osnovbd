@@ -87,28 +87,35 @@ insert into orders (id, products, sum) value (6, 4, 8000);
 
 ### Задание №167
 #### Таблица
+![0_table](https://github.com/user-attachments/assets/a2c43aee-ddc4-4142-b8dc-8b341dbd2b13)
 
 
 
 4) Добавьте в таблицу products новый товар — «VR-очки», стоимостью 70000 рублей в количестве (count) 2 штук.
-   
+   ![1](https://github.com/user-attachments/assets/b3143a65-7d8d-4325-8000-35fd72f3a62b)
+
 
 
 ```
 insert into products (id, name, count, price) value (7, 'VR-очки', 2, 70000);
 ```
 #### Результат:
+![1_result](https://github.com/user-attachments/assets/c628bb4a-8833-4a9b-adf0-10129980cad9)
 
 
 
 ### Задание №172
 #### Таблица
+![0_table](https://github.com/user-attachments/assets/2b4f03dd-9dc6-4676-a314-39bda561b9b1)
 
 
 
 5) В таблицу products внесли данные с ошибкой, вместо "PS5" в наименовании написали IMAC. Исправьте ошибку.
-
+![1](https://github.com/user-attachments/assets/b01951f4-1ec5-4f75-89e1-130dcd87db19)
 
 
 ```
 update products set name='PS5' where id=7;
+```
+#### Результат:
+![1_result](https://github.com/user-attachments/assets/59008f8b-c131-4795-aed2-7f116b57de53)

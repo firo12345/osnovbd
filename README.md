@@ -42,14 +42,16 @@ SELECT id,sum FROM orders WHERE products_count > 3
 ## Лабораторная работа №2 [22.02.2025]
 ### Задание №161
 #### Таблица
+![0_table](https://github.com/user-attachments/assets/3056cc32-1fff-48a4-acca-23bd22489327)
 
-![](/LabW2/161/0_table.png)
+
 
 1) Выберите из таблицы orders 3 самых дешевых заказа за всё время.
 Данные нужно отсортировать в порядке убывания цены.
 Отмененные заказы не учитывайте.
+![1](https://github.com/user-attachments/assets/71fb6483-9f28-4efb-aa26-e9cdf7c17f56)
 
-![](/LabW2/161/1.png)
+
 
 ```
 select * from orders where status in('new','in_progress','delivery') order by sum desc limit 3;
@@ -57,52 +59,56 @@ select * from orders where status in('new','in_progress','delivery') order by su
 2) Выберите из таблицы orders 2 самых дорогих заказов за всё время.
 Данные нужно отсортировать в порядке убывания цены.
 Отмененные заказы не учитывайте.
+![2](https://github.com/user-attachments/assets/e20082bd-539e-4ec3-8aa6-c78885885332)
 
-![](/LabW2/161/2.png)
+
 
 ```
 select * from orders where status in('new','in_progress','delivery') order by sum desc limit 2;
 ```
 ### Задание №166
 #### Таблица
+![0_table](https://github.com/user-attachments/assets/844a0c54-3e2c-4146-9975-bcde40bd2c9b)
 
-![](/LabW2/166/0_table.png)
+
 
 3) Добавьте в таблицу orders данные о новом заказе стоимостью 8000 рублей. В заказе 4 товара (products).
+![1](https://github.com/user-attachments/assets/29f99c62-40ad-4974-9884-c1f4f20cf7c6)
 
-![](/LabW2/166/1.png)
+
 
 ```
 insert into orders (id, products, sum) value (6, 4, 8000);
 ```
 #### Результат:
+![1_result](https://github.com/user-attachments/assets/f85a82d8-66aa-494f-a76e-90526a533937)
 
-![](/LabW2/166/1_result.png)
+
 
 ### Задание №167
 #### Таблица
 
-![](/LabW2/167/0_table.png)
+
 
 4) Добавьте в таблицу products новый товар — «VR-очки», стоимостью 70000 рублей в количестве (count) 2 штук.
    
-![](/LabW2/167/1.png)
+
 
 ```
 insert into products (id, name, count, price) value (7, 'VR-очки', 2, 70000);
 ```
 #### Результат:
 
-![](/LabW2/167/1_result.png)
+
 
 ### Задание №172
 #### Таблица
 
-![](/LabW2/172/0_table.png)
+
 
 5) В таблицу products внесли данные с ошибкой, вместо "PS5" в наименовании написали IMAC. Исправьте ошибку.
 
-![](/LabW2/172/1.png)
+
 
 ```
 update products set name='PS5' where id=7;
